@@ -1,6 +1,7 @@
 const container = document.querySelector("#container");
 
-function createGrid(gridSize) {
+function createGrid(input) {
+    gridSize = input * input;
     for (let i = 0; i < gridSize; i++) {
         const gridSquare = document.createElement("div");
         gridSquare.classList.add("square");
@@ -8,4 +9,4 @@ function createGrid(gridSize) {
     };
 };
 
-createGrid(10);
+createGrid(16);
