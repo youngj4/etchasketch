@@ -1,10 +1,11 @@
 const container = document.querySelector("#container");
-const gridSquare = document.createElement("div");
 
-gridSquare.classList.add("square");
-
-function createGrid() {
-    container.appendChild(gridSquare)
+function createGrid(gridSize) {
+    for (let i = 0; i < gridSize; i++) {
+        const gridSquare = document.createElement("div");
+        gridSquare.classList.add("square");
+        container.appendChild(gridSquare);
+    };
 };
 
-createGrid();
+createGrid(10);
