@@ -6,7 +6,14 @@ function createGrid(input) {
         const gridSquare = document.createElement("div");
         gridSquare.classList.add("square");
         container.appendChild(gridSquare);
+        gridSquare.addEventListener("mouseover", function () {
+            setColor(gridSquare);
+        });
     };
 };
 
 createGrid(16);
+
+function setColor(square) {
+    square.setAttribute("style", "background-color: black");
+};
