@@ -4,7 +4,10 @@ let input;
 
 btn.addEventListener("click", () => {
     input = prompt("Please choose grid size (Max. 100)");
-})
+    if (input > 100) {
+        input = prompt("Please choose again (Max. 100")
+    }
+});
 
 
 function createGrid(input) {
