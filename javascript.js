@@ -1,4 +1,11 @@
 const container = document.querySelector("#container");
+const btn = document.querySelector("#user-input");
+let input;
+
+btn.addEventListener("click", () => {
+    input = prompt("Please choose grid size (Max. 100)");
+})
+
 
 function createGrid(input) {
     gridSize = input * input;
@@ -12,7 +19,7 @@ function createGrid(input) {
     };
 };
 
-createGrid(16);
+createGrid(input);
 
 function setColor(square) {
     square.setAttribute("style", "background-color: black");
