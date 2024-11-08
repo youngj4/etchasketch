@@ -2,14 +2,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: row wrap;
+    /* flex-wrap: row wrap; */
 }
 
 #container {
     display:flex;
-    height: 960px;
-    width: 960px;
-    justify-content: center;
+    height: 1000px;
+    width: 1000px;
+    /* justify-content: space-between; */
     flex-wrap: wrap;
 }
 
@@ -18,9 +18,14 @@ body {
     outline-width: 5px;
     outline-color: black;
     margin: 0;
-    height: 60px;
-    width: 60px;
-    flex: 1 1 auto;
+    /* height: 60px;
+    width: 60px; */
+    /* flex: 1 1 100px; */
+    aspect-ratio: 1;
+}
+
+.hover-color {
+    background-color: black;
 }
 
 #user-input {
