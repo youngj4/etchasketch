@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
     let input;
 
     btn.addEventListener("click", () => {
-        // if (container) {
-        //     clearGrid();
-        // }
+        if (container) {
+            clearGrid();
+        }
         input = prompt("Please choose grid size (Max. 100)");
         if (input > 100) {
             input = prompt("Please choose again (Max. 100)")
@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const flexBasis = 100 / input + "%";
         createGrid(input, flexBasis);
         const currentGrid = document.querySelectorAll(".square");
-        console.log(currentGrid.parentNode)
     });
 
 
@@ -33,8 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     };
 
-    //     function clearGrid() {
-    //         const currentGrid = document.querySelectorAll(".square");
-    //         console.log(currentGrid.parentNode)
-    //     }
+    function clearGrid() {
+        const currentGrid = document.querySelectorAll(".square");
+        currentGrid.forEach(square => {
+            square.remove();
+        })
+    }
 });
